@@ -1,0 +1,77 @@
+/* --- General Styling --- */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+/* --- Part 1: Hover Button --- */
+.hover-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.hover-btn:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* --- Box Animation --- */
+.box {
+  width: 100px;
+  height: 100px;
+  background: #e74c3c;
+  margin: 20px auto;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+.box.animate {
+  background: #9b59b6;
+  transform: translateX(150px) rotate(45deg);
+}
+
+/* --- Modal Styling --- */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  animation: fadeOut 0.5s forwards;
+}
+.modal.show {
+  display: block;
+  animation: fadeIn 0.5s forwards;
+}
+.modal-content {
+  background: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  transform: translateY(-50px);
+  animation: slideUp 0.5s forwards;
+}
+.close {
+  float: right;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes slideUp {
+  from { transform: translateY(50px); }
+  to { transform: translateY(0); }
+}
